@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position demo</title>
+<style>
+    .boterham { 
+        left: 25%;
+        top: 25%;
+        position: absolute;
+        
+        /* Afbeelding details */
+        background-image: url("./position-demo/boterham.png");
+        background-size: cover;
+        width: 50%;
+        aspect-ratio: 1800/1593; /* breedte / hoogte van afbeelding overgenomen */
+    }
+
+    .brood-clip {
+        position: absolute;
+        width: 20%;
+        top: 20%;
+
+        /* Afbeelding details */
+        background-image: url("./position-demo/brood-clipje.png");
+        background-size: cover;
+        aspect-ratio: 386/344; /* breedte / hoogte van afbeelding overgenomen */
+    }
+
+    .brood-clip#links {
+        left: 20%;
+    }
+    .brood-clip#rechts {
+        right: 20%;
+    }
+
+    .clipje {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+
+        /* Afbeelding details */
+        background-image: url("./position-demo/clipje.png");
+        background-size: cover;
+        width: 20%;
+        rotate: 180deg;
+        aspect-ratio: 2/.8;
+    }
+
+</style>
+</head>
+<body>
+    <div class="boterham">
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+    </div>
+
+    <div class="clipje"></div>
+    
+</body>
+</html>
