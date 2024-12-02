@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position demo</title>
+<style>
+    body {
+        font-family: "Fixedsys Excelsior 3.01", "Courier new", "Verdana", sans-serif;
+    }
+
+    .boterham { 
+        left: 25%;
+        top: 25%;
+        position: relative;
+        
+        /* Afbeelding details */
+        background-image: url("./boterham.png");
+        background-size: cover;
+        width: 50%;
+        aspect-ratio: 1800/1593; /* breedte / hoogte van afbeelding overgenomen */
+    }
+
+    .boterham#sticky {
+        position: sticky;
+        top: 0;
+        /* z-index: 1; */
+    }
+
+    .brood-clip {
+        position: absolute;
+        width: 20%;
+        top: 20%;
+        
+        /* Afbeelding details */
+        background-image: url("./brood-clipje.png");
+        background-size: cover;
+        aspect-ratio: 386/334; /*breedte / hoogte van afbeelding overgenomen*/
+    }
+    
+    
+    .brood-clip#fixed {
+        position: fixed;
+        right: 8px;
+        top: 8px;
+        width: 128px;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 16px;
+        box-sizing: border-box;
+    }
+
+    .brood-clip#links {
+        left: 20%;
+    }
+    .brood-clip#rechts {
+        right: 20%;
+    }
+
+    .clipje {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+
+        /* Afbeelding details */
+        background-image: url("./clipje.png");
+        background-size: cover;
+        width: 20%;
+        rotate: 180deg;
+        aspect-ratio: 2/.8;
+    }
+
+</style>
+</head>
+<body>
+    
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+    
+    <div class="boterham" id="sticky">
+        <span>
+            position: sticky;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+
+    <div class="boterham">
+        <span>
+            position: relative;
+        </span>
+        <div class="brood-clip" id="links"></div>
+        <div class="brood-clip" id="rechts"></div>
+        <div class="clipje"></div>
+    </div>
+    
+
+    <div class="brood-clip" id="fixed">
+        <span>
+            position:fixed;
+        </span>
+    </div>
+
+</body>
+</html>
