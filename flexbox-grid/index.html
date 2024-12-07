@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/media-library.css">
+    <link rel="stylesheet" href="style/media-player.css">
+    <link rel="stylesheet" href="style/media-player-dragging.css">
+</head>
+
+<body>
+    <!-- Media Library -->
+    <div class="media-library">
+        <div class="media-library-header">
+            <h1>Media Library</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" class="toggle-view-icon __isGrid" version="1.1" viewBox="0 0 48 48" id="toggleView">
+                <g>
+                  <g id="grid-view" class="cls-1">
+                    <rect y="0" width="22" height="22"/>
+                    <rect x="26" width="22" height="22"/>
+                    <rect x="26" y="26" width="22" height="22"/>
+                    <rect y="26" width="22" height="22"/>
+                  </g>
+                  <g id="list-view">
+                    <rect width="48" height="11"/>
+                    <rect y="37" width="48" height="11"/>
+                    <rect y="19" width="48" height="11"/>
+                  </g>
+                </g>
+            </svg>
+
+            <svg class="shuffle-icon" onclick="shuffleMusic()" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48,23.01c0-3.63-1.8-7.28-4.69-9.54-2.83-2.21-6.46-2.9-10.23-1.96-4.38,1.09-7.01,5.44-9.57,9.64-2.58,4.24-5.24,8.63-9.47,9.47-3.3.66-5.83.29-7.52-1.09-2.28-1.87-2.53-5.18-2.53-6.51,0-4.17,4.68-7.57,10.43-7.57h1.08l-2.41,2.41,2.83,2.83,7.07-7.07-7.72-7.72-2.83,2.83,2.72,2.72h-.74C6.48,11.44,0,16.63,0,23.01c0,2.37.52,6.76,3.99,9.6,1.88,1.54,4.26,2.32,7.09,2.32,1.17,0,2.42-.13,3.74-.4,5.95-1.19,9.22-6.57,12.11-11.32,2.23-3.67,4.34-7.14,7.12-7.83,3.26-.82,5.5.22,6.79,1.23,1.92,1.5,3.15,4.01,3.15,6.39,0,4.17-4.68,7.56-10.43,7.56h-.89l2.13-2.13-2.83-2.83-7.07,7.07,7.72,7.72,2.83-2.83-2.99-2.99h1.09c7.96,0,14.43-5.19,14.43-11.56Z"/>
+            </svg>
+        </div>
+        <div class="media-library-items __isGrid" id="media-library">
+            <!-- 
+            De template tag kun je gebruiken als template om op een duidelijkere manier
+            te laten zien hoe je HTML in elkaar zit dan dat je dat met document.createElement() 
+            zou kunnen doen.
+              -->
+            <template class="media-library-item" id="template-media-library-item">
+                <div class="media-library-item">
+                    <img src="" class="media-library-album">
+                    <div class="media-library-item-tekst">
+                        <p class="media-library-song"></p>
+                        <h2 class="media-library-artist"></h2>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+
+
+
+
+    <!-- Media Player -->
+    <div class="media-player">
+        <header class="media-header">
+            <div class="left">
+                <div class="media-title">
+                    <h1 id="title">Lorem ipsum</h1>
+                    <h2 id="artist">Lorem ipsum</h2>
+                </div>
+
+                <section class="media-controls">
+                    <div class="buttons">
+                        <button id="prev" onclick="prevSong()">⏮</button>
+                        <button id="play-pause" onclick="playAudio()">▶</button>
+                        <button id="next" onclick="nextSong()">⏭</button>
+                    </div>
+                </section>
+            </div>
+            <div class="right">
+                <img src="" class="media-player-thumbnail" id="albumCover">
+            </div>
+        </header>
+
+        <footer class="media-progressbar">
+            <div class="range" class="range">
+                <div class="range-knob" id="rangeKnob"></div>
+            </div>
+            <audio id="audioFile" />
+        </footer>
+    </div>
+
+    <script src="scripts/media-playlist.js"></script>
+    <script src="scripts/media-player.js"></script>
+    <script src="scripts/media-player-dragging.js"></script>
+    <script src="scripts/media-library.js"></script>
+</body>
+
+</html>

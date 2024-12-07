@@ -1,0 +1,10 @@
+.media-player {
+    position: absolute;
+    top: calc(100vh - 240px); /* Initial position */
+    left: calc(100vw - 550px); /* Initial position */
+    cursor: grab;
+}
+  
+.media-player:active {
+    cursor: grabbing;
+}

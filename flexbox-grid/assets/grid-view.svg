@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        display: none;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="grid-view" class="cls-1">
+      <rect y="0" width="22" height="22"/>
+      <rect x="26" width="22" height="22"/>
+      <rect x="26" y="26" width="22" height="22"/>
+      <rect y="26" width="22" height="22"/>
+    </g>
+    <g id="list-view">
+      <rect width="48" height="11"/>
+      <rect y="37" width="48" height="11"/>
+      <rect y="19" width="48" height="11"/>
+    </g>
+  </g>
+</svg>

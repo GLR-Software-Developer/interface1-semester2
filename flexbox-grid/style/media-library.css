@@ -1,0 +1,102 @@
+/* Zorg ervoor dat de media bibliotheek bovenaan in het midden van de pagina staat */
+.media-library {
+    position: absolute;
+    top:0;
+    left: 50%;
+    translate: -50% 0;
+    width: 640px;
+    padding-right: 24px;
+    max-width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Verberg het template element */
+#template-media-library-item {
+    display: none;
+}
+
+.toggle-view-icon {
+    fill: #eee;
+    position: absolute;
+    top: 64px;
+    width: 32px;
+    right: 0;
+}
+
+.shuffle-icon {
+    fill: #eee;
+    position: absolute;
+    top: 64px;
+    width: 32px;
+    right: 64px;
+}
+
+.toggle-view-icon #grid-view,
+.toggle-view-icon #list-view {
+    transition: opacity 0.2s;
+}
+.toggle-view-icon.__isList #grid-view {
+    opacity: 0;
+}
+.toggle-view-icon.__isGrid #list-view {
+    opacity: 0;
+}
+
+.media-library-header {
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 48px 0;
+}
+
+.media-library-header h1 {
+    margin: 0;
+    padding: 16px 32px;
+    background: #ff6f61;
+    display: inline-block;
+    border-radius: 32px;
+}
+
+.media-library-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Or use repeat(4, 1fr) for 4 columns */
+    gap: 32px;
+    padding-bottom: 64px;
+}
+
+.media-library-item {
+    gap: 8px;
+    display: flex;
+    flex-flow: column;
+}
+
+.media-library-album {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+}
+
+.media-library-song {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.media-library-artist {
+    margin: 0;
+    font-size: 16px;
+    color: #ff6f61;
+}
+
+/* List view */
+.media-library-items.__isList {
+    grid-template-columns: repeat(1, 1fr); /* Or use repeat(4, 1fr) for 4 columns */
+}
+.media-library-items.__isList .media-library-album {
+    width: 72px;
+}
+
+.media-library-items.__isList .media-library-item {
+    flex-flow: row;
+}

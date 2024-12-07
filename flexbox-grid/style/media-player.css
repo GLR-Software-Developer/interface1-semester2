@@ -1,0 +1,108 @@
+.media-player {
+    width: 480px;
+    max-width: 80%;
+    background: #292929;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+
+/*  Media header gebruikt flex-box om  */
+.media-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.media-header h1 {
+    color: #ff6f61;
+    margin: 0;
+    font-size: 24px;
+}
+
+.media-header h2 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* left element zelf maakt gebruik van flexbox */
+/* space-between zorgt ervoor dat de uitlijning gebeurt met ruimte ertussen */
+.media-header .left {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    /* Andere opties: */
+    /* justify-content: space-around; */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+}
+
+.media-header .right {
+    width: 128px;
+}
+
+.media-header .right img {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+
+
+/* Knoppen & progressie balk */
+.buttons button {
+    background: #ff6f61;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    width: 32px;
+    line-height: 1;
+    display: inline-block;
+    aspect-ratio: 1/1;
+}
+
+.buttons button:hover {
+    background: #ff836e;
+}
+
+.progress-bar {
+    border-radius: 5px;
+    height: 10px;
+    position: relative;
+    margin-top: 20px;
+    accent-color: #ff836e;
+}
+
+.progress-bar::-webkit-slider-runnable-track,
+.progress-bar::-moz-range-track {
+    background: #333;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+    height: 0.5rem;
+}
+
+.range {
+    width: 100%;
+    height: 8px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 16px;
+    overflow: visible;
+}
+
+.range-knob {
+    position: absolute;
+    left: 0;
+    top: -4px;
+    margin-left: -7px;
+    border-radius: 100%;
+    border: 1px solid #aaa;
+    width: 14px;
+    height: 14px;
+    background: #ff6f61;
+}
