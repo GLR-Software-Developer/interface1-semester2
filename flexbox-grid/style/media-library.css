@@ -1,9 +1,7 @@
 /* Zorg ervoor dat de media bibliotheek bovenaan in het midden van de pagina staat */
 .media-library {
-    position: absolute;
-    top:0;
-    left: 50%;
-    translate: -50% 0;
+    position: relative;
+    float: left;
     width: 640px;
     padding-right: 24px;
     max-width: 100%;

@@ -11,6 +11,7 @@
 /*  Media header gebruikt flex-box om  */
 .media-header {
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     margin-bottom: 20px;
 }
