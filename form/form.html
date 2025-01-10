@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            background-color: #fefefe;
+        }
+        
+        .input-veld {
+            width: 256px;
+            padding: 8px 12px;
+            border: 1px solid #eee;
+            box-shadow: 4px 4px 8px rgba(0,0,0,.08);
+        }
+        .row {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .row > *:first-child {
+            font-weight: bold;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .row > *:last-child {
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            /* resize: horizontal; */
+            /* resize: both; */
+            /* resize: none; */
+        }
+
+        fieldset {
+            margin-bottom: 16px;
+        }
+
+        #result {
+            position: fixed;
+            right: 0;
+            top: 0;
+            padding: 24px;
+            width: 320px;
+            background-color: #fff;
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-radius: 0 0 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test formulier</h1>
+    <form action="">
+        <!-- Fieldset tag + legend tag -->
+        <fieldset class="row">
+            <legend>Opleiding</legend>
+            <input class="input-veld" type="text" name="studie" value="Creative Software Development" readonly>
+        </fieldset>
+
+        <!-- Label tag -->
+        <label class="row">
+            <span>Voornaam:</span>
+            <!-- Er zit hier een bug bij dit input veld check bij de andere input velden hoe je dit kunt fiksen -->
+            <input class="input-veld" type="text" required>
+        </label>
+        
+        <!-- Div tag zonder label -->
+        <div class="row">
+            <span>Achternaam:</span>
+            <input class="input-veld" type="text" name="achternaam" required>
+        </div>
+
+        <!-- Div tag met label -->
+        <div class="row">
+            <label for="leeftijd">Leeftijd:</label>
+            <input class="input-veld" type="text" name="leeftijd" id="leeftijd">
+        </div>
+
+
+        <div class="row">
+            <span>Bericht:</span>
+            <textarea class="input-veld" rows="5" name="bericht" resize="false"></textarea>
+        </div>  
+
+        <button type="submit">Verstuur</button>
+    </form>
+    <div id="result"></div>
+
+</body>
+</html>
